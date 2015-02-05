@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$servername = "127.3.156.2:3306";
-$username = "adminm2YEpUG";
-$password = "Y57qrEZXaq-h";
-$dbname = "csc413";
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 	
 // Is this file included? 
 echo " The connection file is included. <br>";

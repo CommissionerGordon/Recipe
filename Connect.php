@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+$servername = "OPENSHIFT_MYSQL_DB_HOST";
+$username = "OPENSHIFT_MYSQL_DB_USERNAME";
+$password = "OPENSHIFT_MYSQL_DB_PASSWORD";
+$dbname = "OPENSHIFT_MYSQL_DB_NAME";
 	
 // Is this file included? 
 echo " The connection file is included. <br>";

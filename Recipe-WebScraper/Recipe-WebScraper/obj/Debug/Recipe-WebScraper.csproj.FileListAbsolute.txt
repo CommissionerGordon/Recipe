@@ -1,0 +1,9 @@
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.exe.config
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.exe
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.pdb
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.csprojResolveAssemblyReference.cache
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe_WebScraper.Form1.resources
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe_WebScraper.Properties.Resources.resources
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.csproj.GenerateResource.Cache
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.exe
+c:\users\amanda\documents\visual studio 2012\Projects\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.pdb

@@ -45,7 +45,7 @@ namespace Recipe_WebScraper
                     sourceCode = getSourceCode(links[count], true);
 
                     // Write the sourceCode to a file
-                    StreamWriter streamWrite = new StreamWriter("SQL_Query.txt", true);
+                    StreamWriter streamWrite = new StreamWriter("SQL_Query.rtf", true);
                     streamWrite.Write(sourceCode);
                     streamWrite.Close();
                 }
@@ -129,7 +129,7 @@ namespace Recipe_WebScraper
             string smallSnip;
             string[] snipValue;
             string[] recipeDetails = {};
-            string recipeSQLstatement = "INSERT INTO TestTable (recipeName, meas, ingrName, mixInstructions) VALUES ('";
+            string recipeSQLstatement = "INSERT INTO TestTable (recipeName, meas, ingrName, mixInstructions) VALUES (\"";
             
             // Gets recipe title
             try
@@ -137,22 +137,22 @@ namespace Recipe_WebScraper
                 // Gets recipe title.
                 snipOfSourceCode = textFollowing(sourceCode, "<H1>");
                 snipValue = snipOfSourceCode.Split('<');
-                testString = recipeSQLstatement += snipValue[0] + "\', ";
+                testString = recipeSQLstatement += snipValue[0] + "\", ";
 
                 // Gets measurement of first ingredient
                 smallSnip = textFollowing(sourceCode, "<LI>");
                 snipValue = Regex.Split(smallSnip, " <A");
-                recipeSQLstatement += "\'" + snipValue[0] + "\', ";
+                recipeSQLstatement += "\"" + snipValue[0] + "\", ";
 
                 // Gets name of first ingredient
                 snipOfSourceCode = textFollowing(snipValue[1], ">");
                 snipValue = Regex.Split(snipOfSourceCode, "</A");
-                recipeSQLstatement += "\'" + snipValue[0] + "\', ";
+                recipeSQLstatement += "\"" + snipValue[0] + "\", ";
 
                 // Gets mixing instructions
                 snipOfSourceCode = textFollowing(smallSnip, "<P>");
                 snipValue = Regex.Split(snipOfSourceCode, "</P>");
-                recipeSQLstatement += "\'" + snipValue[0] + "\'";
+                recipeSQLstatement += "\"" + snipValue[0] + "\"";
                 
                 recipeSQLstatement += ");";
             }

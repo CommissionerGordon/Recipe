@@ -22,6 +22,8 @@ namespace Recipe_WebScraper
         {
             if (urlTextBox.Text == "http://csc413-recipefinal.rhcloud.com/ScraperTestPage.html")
                 this.Text = "Scraper Test Page";
+            else if (urlTextBox.Text == "http://csc413-recipefinal.rhcloud.com/LinksList.html")
+                this.Text = "Links List Test Page";
             else
                 this.Text = "You are using a different URL.";
         }
@@ -40,11 +42,6 @@ namespace Recipe_WebScraper
 
             // Use url to get the website's source code
             string sourceCode = WebScraper.getSourceCode(url, state);
-
-            // Write the sourceCode to a file
-            StreamWriter streamWrite = new StreamWriter("SQL_Query.txt");
-            streamWrite.Write(sourceCode);
-            streamWrite.Close();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

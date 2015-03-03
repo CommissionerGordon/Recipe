@@ -75,9 +75,9 @@
             this.doLinksCheckBox.AutoSize = true;
             this.doLinksCheckBox.Location = new System.Drawing.Point(50, 95);
             this.doLinksCheckBox.Name = "doLinksCheckBox";
-            this.doLinksCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.doLinksCheckBox.Size = new System.Drawing.Size(128, 17);
             this.doLinksCheckBox.TabIndex = 3;
-            this.doLinksCheckBox.Text = "Scrape Links?";
+            this.doLinksCheckBox.Text = "Scrape single recipe?";
             this.doLinksCheckBox.UseVisualStyleBackColor = true;
             // 
             // warningLabel
@@ -121,7 +121,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

@@ -12,14 +12,17 @@
 
     <style>
         body {
-            background-color: darkgray;
+            background-color: #120424;
         }
         h2 {
             color: darkblue;
         }
         td {
-            font-size: x-large;
+            font-size: 14px;
         }
+            td.main {
+                font-size: x-large;
+            }
         .roundBox {
             background-color: white;
             border: 2px solid #a1a1a1;
@@ -29,11 +32,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <div style="height: 55px; background-color: #222222;">
+    <nav class="navbar navbar-default navbar-inverse center">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <h2 style="color: orangered;"><span class="glyphicon glyphicon-glass"></span>
+                    <h2 style="vertical-align: middle; color: orangered;"><span class="glyphicon glyphicon-glass"></span>
                         Team Recipe<small> Vote for Pedro!</small></h2></a>
             </div>
             <div>
@@ -46,6 +50,7 @@
             </div>
         </div>
     </nav>
+    </div>
 <!-- Page container -->
 <div class="container">
 <!-- <h1><span class="glyphicon glyphicon-glass" style="padding: 25px 10px;"></span>Team Recipe<small> Vote for Pedro!</small></h1>
@@ -53,8 +58,8 @@
 
 <div class="row">
     <!--Left Sidebar Content -->
-	<div class="col-md-2" style="padding: 25px 10px;">
-	<h2>Left Sidebar</h2>
+	<div class="col-md-2 sidebar" style="padding: 25px 5px;">
+	<h2 class="sidebar">Ingredients</h2>
     <br/>
     <?php
     /* Could this be eliminated by including the Connect.php
@@ -68,30 +73,49 @@
     // Create connection
     $conn = new mysqli($dbserver, $dbuser, $dbpwd, $dbname);
     
-        $categories = "SELECT DISTINCT Category FROM TestTable";
-        $catResults = mysqli_query($conn, $categories);
-        $totalCats = mysqli_num_rows($catResults);
+        $ingredients = "SELECT DISTINCT ingrName FROM TestTable";
+        $ingrResults = mysqli_query($conn, $ingredients);
+        $totalIngr = mysqli_num_rows($ingrResults);
         
-        if($totalCats > 0) 
+        if($totalIngr > 0) 
         {
-            while($row = $catResults->fetch_assoc()) 
+            while($row = $ingrResults->fetch_assoc()) 
+            {
+                echo $row["ingrName"] . "<br>";
+            }
+        } 
+        else 
+        {
+            echo "No ingredients found!";
+        }
+        ?>
+        
+        <br/><h2 class="sidebar">Drinks</h2><br/>
+        <?php
+        $drinks = "SELECT DISTINCT recipeName FROM TestTable";
+        $drinksResults = mysqli_query($conn, $drinks);
+        $totalDrinks = mysqli_num_rows($drinksResults);
+        
+        if($totalDrinks > 0) 
+        {
+            while($row = $drinksResults->fetch_assoc()) 
             {
                 echo $row["recipeName"] . "<br>";
             }
         } 
         else 
         {
-            echo "No categories found!";
+            echo "No ingredients found!";
         }
         ?>
+
 	</div>
     <!-- End left sidebar -->
 	
     <!-- Main content area -->
-	<div class="col-md-8 roundBox" style="padding: 25px 10px;">
-	<h2>MySQL Test</h2><br /><br />
+	<div class="col-md-8 roundBox" style="padding: 25px 5px;">
+	<h2>Drink Recipes</h2>
     <?php
-    echo "<strong>Second test: </strong><br>";
 	
     /* Could this be eliminated by including the Connect.php
      * and using $_GET["conn"]; */
@@ -107,42 +131,50 @@
 // Check connection
 if (!$conn) {
 	echo "Could not connect to DB.";
-	} else {
-	echo "Connected successfully!";
 	}
-    echo "<br><br>";
+    echo "<br>";
     
     $query = "SELECT * from TestTable";
     $results = mysqli_query($conn, $query);
     $total_results = mysqli_num_rows($results);
     
-    echo "Total number of recipes: " . $total_results . "<br /><br />";
+    echo "<strong>Total number of recipes: " . $total_results . "</strong><br/><br/>";
     
-	echo "<table>";
-    echo "<tr><td colspan=2>Recipe</td><td colspan=2>Ingredient</td><td>Instructions</td></tr>";
+	echo "<table id=\"t01\">";
+    //echo "<th><td colspan=2>Recipe</td><td colspan=3>Ingredients</td></th>";
     if ($total_results > 0) {
+        //echo "<div class=\"media\">";
+        //echo "<div class=\"media-left\">";
+        //echo "<img class=\"media-object\" src=\"" . $row["image"] . ".jpg\">";
+        //echo "</div"; // Closes media-left
+        //echo "<div class\"media-body\">";
+        //echo "<h4 class=\"media-heading\">" . $row["recipeName"] . "</h4>";
+        //echo "<div>" . $row["mixInstructions"] . "</div>";
+        //echo "</div>"; // Closes media-body
+        //echo "</div>"; // Closes media
+        
         // output data of each row
         while($row = $results->fetch_assoc()) {
-            echo "<tr>";
+            echo "<tr class=\"roundbox\">";
             echo "<td><img src=\"" . $row["image"] . ".jpg\"></td>";
-            echo "<td> " . $row["recipeName"] . "</td>";
-            echo "<td>" . $row["meas"] . "</td>";
-            echo "<td>" . $row["ingrName"] . "</td>";
+            echo "<td class=\"main\"> " . $row["recipeName"] . "</td>";
+            echo "<td class=\"main\">" . $row["meas"] . "</td>";
+            echo "<td colspan=2 class=\"main\">" . $row["ingrName"] . "</td>";
             echo "</tr>";
-            echo "</tr><td colspan=5>" . $row["mixInstructions"] . "</td></tr>"; 
+            echo "</tr><td colspan=5>" . $row["mixInstructions"] . "</td></tr>";
         }
     } else {
         echo "0 results";
     }
-    echo "</table>";
+    echo "</table></div>";
     ?>
     <br/>
 	</div>
     <!-- End main content area -->
 	
     <!-- Right sidebar -->
-	<div class="col-md-2" style="padding: 25px 10px;">
-	<h2>Right Sidebar</h2>
+	<div class="col-md-2 sidebar"> <!-- style="padding: 25px 5px;"> -->
+	<h2 class="sidebar">Right Sidebar</h2>
     Vivamus mattis aliquet velit nec cursus. Donec maximus volutpat sagittis. Suspendisse potenti - 
     blah, blah, blah - lorem ipsum.<br /><br />
     The PHP cartridge is working as well as the MySQL and PHPMyAdmin.<br /><br />

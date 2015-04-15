@@ -25,3 +25,12 @@ C:\Users\jasbrown\Desktop\Recipe\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\D
 C:\Users\jasbrown\Desktop\Recipe\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.csproj.GenerateResource.Cache
 C:\Users\jasbrown\Desktop\Recipe\trunk\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.exe
 C:\Users\jasbrown\Desktop\Recipe\trunk\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.pdb
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.exe.config
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.exe
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.pdb
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.exe
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\bin\Debug\Recipe-WebScraper.pdb
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe_WebScraper.Form1.resources
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe_WebScraper.Properties.Resources.resources
+C:\Users\Administrator\Documents\CSC413_Recipe\csc413_Commish-2\trunk\Recipe-WebScraper\Recipe-WebScraper\obj\Debug\Recipe-WebScraper.csproj.GenerateResource.Cache

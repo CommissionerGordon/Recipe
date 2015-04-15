@@ -1,7 +1,27 @@
-﻿using System;
+﻿/*************************************************************************
+ * CSC413 - Advanced Software Development I
+ * Professor: James "The Commissioner" Gordon
+ * Programmers: Amanda Jaynes, Jason Brown
+ * WebScraper.cs
+ * 
+ * Team Recipe
+ * 
+ * This project is a webscraper used for obtaining data from the website
+ * http://webtender.com in order to populate our database and display
+ * the functionality of our web appliction. This project is purely for
+ * educational purposes.
+ * 
+ * The word "DEBUG:"
+ * at the beginning of certain comments is to make it easier to find
+ * code that probably needs to be rewritten, re-designed, or possibly
+ * eliminated altogether.
+ *************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Windows.Forms;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,7 +29,6 @@ using System.Threading.Tasks;
 
 using System.Net;   // Allows us to make web requests
 using System.Text.RegularExpressions; // Allows us to Split using Regex
-using System.Windows.Forms;
 
 namespace Recipe_WebScraper
 {
@@ -37,15 +56,15 @@ namespace Recipe_WebScraper
                 string recipeDetails = getRecipeDetails(sourceCode);
                 sourceCode = recipeDetails;
             }
-            else // Scrape links AND recipes?
+            else // DEBUG: Scrape links AND recipes?
             { 
                 links = getLinksToScrape(sourceCode);
-                for (int count = 0; count < 15; count++)
+                for (int count = 0; count < 30; count++)
                 {
                     sourceCode = getSourceCode(links[count], true);
 
                     // Write the sourceCode to a file
-                    StreamWriter streamWrite = new StreamWriter("SQL_Query.rtf", true);
+                    StreamWriter streamWrite = new StreamWriter("SQL_Query.txt", true);
                     streamWrite.Write(sourceCode);
                     streamWrite.Close();
                 }

@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+    <title>Recipe Warehouse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"><script src="http://code.jquery.com/jquery.js"></script
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
     
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -29,28 +30,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="banner-alcohol-06.jpg" alt="Booze"><div class="carousel-caption">
-	  <!-- Not currently using the captions. We might once the site designers start working their magic. -->
-          <h3 style="color: black; text-shadow: 1.5px 1.5px #333333"></h3>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="banner-Absolut-2.jpg" class="img-rounded" alt="Booze">
+      <img src="imgs\banner-Absolut-2.jpg" class="img-rounded" alt="Booze">
 	  <div class="carousel-caption">
           <h3 style="color: black; text-shadow: 1.5px 1.5px #333333"></h3>
       </div>
     </div>
 
     <div class="item">
-      <img src="banner-alcohol-06.jpg" class="img-rounded" alt="More Booze!">
+      <img src="imgs\banner-alcohol-06.jpg" class="img-rounded" alt="More Booze!">
 	  <div class="carousel-caption">
           <h3 style="color: black; text-shadow: 1.5px 1.5px #333333"></h3>
       </div>
     </div>
 
     <div class="item">
-      <img src="banner-Bottles.jpg" class="img-rounded" alt="But wait! There's more!">
+      <img src="imgs\banner-Bottles.jpg" class="img-rounded" alt="But wait! There's more!">
 	  <div class="carousel-caption">
           <h3 style="text-shadow: 1.5px 1.5px #333333"></h3>
       </div>
@@ -113,14 +107,22 @@
 	
     /* Could this be eliminated by including the Connect.php
      * and using $_GET["conn"]; */
-    $dbhost = getenv("OPENSHIFT_MYSQL_DB_HOST");
-    $dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
-    $dbuser = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-    $dbpwd = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-    $dbname = getenv("OPENSHIFT_APP_NAME");
-    $dbserver = $dbhost . ":" . $dbport;
+    //$dbhost = getenv("OPENSHIFT_MYSQL_DB_HOST");
+    //$dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
+    //$dbuser = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+    //$dbpwd = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+    //$dbname = getenv("OPENSHIFT_APP_NAME");
+    //$dbserver = $dbhost . ":" . $dbport;
     // Create connection
-    $conn = new mysqli($dbserver, $dbuser, $dbpwd, $dbname);
+    //$conn = new mysqli($dbserver, $dbuser, $dbpwd, $dbname);
+    
+    $serverName = "127.3.156.2:3306";
+    $userName = "adminm2YEpUG";
+    $password = "XmG6hsx8yMeDn7Zy";
+    $dbname = "csc413";
+	 // Y57qrEZXaq-h
+    // Create connection
+    $conn = new mysqli($serverName, $userName, $password, $dbname);
 
 // Check connection
 if (!$conn) {

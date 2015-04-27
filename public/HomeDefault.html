@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title Name</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="Header">
+<h1>My Title</h1>
+        <div id="TaskBar"> 
+            <ul>
+		<li><a href="HomeDefault.html">Home</a></li>
+		<li><a id="NavSearchBtn">Search</a></li>
+		<li><a href="Home.html">Log In</a></li>
+	</ul>
+        </div>
+</div>
+
+<div id="Middle">
+    <div id="SearchBar" hidden>Search
+			<input id="search" name="search" type="text" placeholder="Search..."/>
+			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
+			<div id="AdvancedSearch" hidden>
+				<form action="test.php" method="get">
+					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
+					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
+					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+					<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
+					<input type="text" name="Prep"><br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Cook Time
+					<input type="text" name="Cook"><br>
+					<button type="submit" name="AdvSearchSubmitBtn" id="AdvSearchSubmitBtn">Submit</button><br>
+				</form>
+			</div>
+		</div>
+	<div id="MainContent">
+		<h2>WELCOME!</h2>
+	</div>
+	<div id="Right">
+		<h2>Recommended Recipes</h2>
+		<div class="RecommendedRecipe">
+			<h3>Vodka Float</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="RecommendedRecipe">
+			<h3>Raspberry Brainsplosion</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="RecommendedRecipe">
+			<h3>Bloody Mary</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+	</div>
+</div>
+
+<div id="LogIn" hidden>
+	<h4>LOG IN</h4>
+	Username: <input type="text" name="Username"><br>
+	Password: <input type="text" name="Password"><br>
+	<h4>REGISTER</h4>
+	Desired Username: <input type="text" name="Username"><br>
+	Desired Password: <input type="text" name="Password"><br>
+	Email: <input type="text" name="Email"><br>
+	<button>Log In With Facebook</button>
+	<button>Log In With Google+</button>
+	<button>Register With Facebook</button>
+	<button>Register With Google+</button>
+</div>
+
+<div id="LogOut" hidden>
+	<p>You are now logged out.</p>
+</div>
+
+<div id="Footer">
+	<ul>
+		<li>Copyright</li>
+		<li>Contact</li>
+		<li>Etc</li>
+	</ul>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

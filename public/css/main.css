@@ -1,0 +1,325 @@
+/* CSS */
+
+/* tags */
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #000;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+#Header {
+    margin: 0px;
+    padding: 0px;
+    
+    background-color: #fff;
+}
+
+#Header h1{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+/* navigation */
+#TaskBar {
+    margin: 0px;
+    padding: 0px;
+    
+    background-color: #50509f;
+}
+
+#TaskBar ul {
+    list-style-type: none;
+    border: none;
+    /*border-top: solid 2px #000;*/
+    border-bottom: solid 2px #1c1c45;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 150px;
+    
+    /*background-color: #000;*/
+    color: #fff;
+    font-size: 12pt;
+    text-transform: capitalize;
+}
+
+#TaskBar a, #TaskBar a:visited{
+    color: #ededed;
+}
+
+#TaskBar a:hover, #TaskBar a:active{
+    color: #fff;
+}
+
+#TaskBar li {
+    display: inline-block;
+    padding: 5px;
+    border: none;
+    /*border-right: solid 2px #50509f;*/
+}
+
+#NavSearchBtn {
+    cursor: pointer;
+}
+
+/* Search */
+
+#SearchBar {
+    margin: 0px;
+    padding: 0px;
+    
+    padding-top: 5px;
+    padding-left: 60px;
+    
+    width: 100%;
+    background-color: #9494f2;
+}
+
+#search {
+    font-style: italic;
+    width: 250px;
+}
+
+#SearchSubmitBtn {
+    background-color: #3b80ef;
+    border: none;
+    border-bottom: solid 2px #1c59bc;
+    height: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#AdvSearchBtn {
+    background-color: #ff8558;
+    border: none;
+    border-bottom: solid 2px orangered;
+    height: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#AdvSearchSubmitBtn {
+    background-color: #ff8558;
+    border: none;
+    border-bottom: solid 2px orangered;
+    height: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#AdvancedSearch {
+    margin: 0px;
+    padding: 0px;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+#AdvancedSearch input {
+    margin: 0px;
+    padding: 0px;
+    
+    margin-top: 6px;
+    
+    display: inline-block;
+}
+
+#AdvancedSearch div {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 3px;
+    
+    color: #fff;
+    text-align: center;
+    width: 20px;
+    
+    background-color: #6e6ef0;
+    
+    cursor: pointer;
+}
+
+#AdvancedSearch button {
+    margin-top: 10px;
+}
+
+/* middle */
+#Middle {
+    width: 100%;
+    
+    float: left;
+    
+    padding: 0px;
+    margin: 0px;
+    
+    background-color: #ddd;
+}
+
+/* main content */
+#MainContent {
+    float: left;
+    
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+}
+
+#MainContent h2 {
+    
+}
+
+.FavoriteRecipes {
+    text-align: center;
+    background-color: #fff;
+    
+    width: 200px;
+    
+    margin: 0px;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.FavoriteRecipes h3 {
+    margin: 0px;
+    margin-bottom: 2px;
+}
+
+.FavoriteRecipeImage {
+    width: 150px;
+    height: 100px;
+    
+    border: solid 2px #000;
+    
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-color: #000;
+}
+
+.FavoriteRecipes a, .FavoriteRecipes a:visited {
+    color: blue;
+}
+
+.FavoriteRecipes a:hover, .FavoriteRecipes a:active {
+    text-decoration: underline;
+}
+
+/* right content */
+
+#Right {
+    float: right;
+    
+    margin: 0px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    
+    width: 350px;
+}
+
+#Right h2 {
+    margin: 0px;
+    padding: 0px;
+    
+    margin-bottom: 10px;
+}
+
+.RecommendedRecipe {
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    width: 340px;
+    height: 160px;
+    
+    background-color: #fff;
+    
+}
+
+.RecommendedRecipe h3 {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.RecipeImage {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 5px;
+    
+    border: solid 2px #000;
+    
+    background-color: #000;
+}
+
+.RecommendedRecipe h4 {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 220px;
+    padding-left: 10px;
+    
+    text-align: right;
+}
+
+.RecommendedRecipe ul {
+    list-style-type: none;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+    
+    width: 210px;
+    padding-bottom: 10px;
+}
+
+.RecommendedRecipe li {
+    display: block;
+    padding-bottom: 3px;
+}
+
+.RecommendedRecipe a, .RecommendedRecipe a:visited {
+    color: blue;
+    
+    float: left;
+    padding: 5px;
+    margin: 0px;
+    
+    margin-left: 20px;
+}
+
+.RecommendedRecipe a:hover, .RecommendedRecipe a:active {
+    text-decoration: underline;
+}
+
+/* footer */
+#Footer {
+    float: left;
+    width: 99%;
+    margin: 0px;
+    background-color: #50509f;
+    color: #ccc;
+    padding: 2px;
+}
+
+#Footer ul {
+    list-style-type: none;
+}
+
+#Footer li {
+    display: inline;
+}

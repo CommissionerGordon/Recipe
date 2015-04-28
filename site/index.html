@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>Recipe</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">Recipe</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+
+            
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                
+                <li>
+                    <a href="https://github.com/CommissionerGordon/Recipe">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#getdrinkrecpiescom">getdrinkrecpies.com</a></li>
+        
+    
+        <li class="main "><a href="#introduction">Introduction</a></li>
+        
+            <li><a href="#purpose">Purpose</a></li>
+        
+            <li><a href="#scope">Scope</a></li>
+        
+            <li><a href="#system-overview">System Overview</a></li>
+        
+            <li><a href="#team-recipe">Team Recipe</a></li>
+        
+    
+        <li class="main "><a href="#software-architecture">Software Architecture</a></li>
+        
+    
+        <li class="main "><a href="#functional-requirements">Functional Requirements</a></li>
+        
+            <li><a href="#home-page">Home Page</a></li>
+        
+            <li><a href="#pantry-page">Pantry Page</a></li>
+        
+            <li><a href="#favorites-page">Favorites Page</a></li>
+        
+            <li><a href="#search">Search</a></li>
+        
+            <li><a href="#recipe-of-the-day">Recipe of the Day</a></li>
+        
+            <li><a href="#recipe">Recipe</a></li>
+        
+            <li><a href="#future-features">Future Features</a></li>
+        
+            <li><a href="#recipes-can-be-exportedshared-to-social-media-as-different-templated-recipe-cards">Recipes can be exported/shared to social media as different templated recipe cards.</a></li>
+        
+    
+        <li class="main "><a href="#database">Database</a></li>
+        
+            <li><a href="#entity-relation-diagram">Entity-Relation Diagram</a></li>
+        
+            <li><a href="#tables">Tables</a></li>
+        
+            <li><a href="#stored-procedures">Stored Procedures</a></li>
+        
+    
+        <li class="main "><a href="#conclusion">Conclusion</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>﻿</p>
+<h1 id="getdrinkrecpiescom">getdrinkrecpies.com</h1>
+<p>Team Recipe<br>
+CSC 413 Advanced Software Development I<br>
+Spring 2015<br></p>
+<hr />
+<h1 id="introduction">Introduction</h1>
+<p><a href="http://csc413-recipefinal.rhcloud.com/">getdrinkrecpies.com</a>
+<a href="https://github.com/CommissionerGordon/Recipe">Github</a></p>
+<h2 id="purpose">Purpose</h2>
+<p>The purpose of this document is to serve as a guide to designers, developers, and testers who are responsible for the engineering of the getdrinkrecpies.com project. it should give the engineers all of the information necessary to design, develop and test the software.</p>
+<h2 id="scope">Scope</h2>
+<p>This document contains a complete description of the functionality or the getdrinkrecpies.com project. It includes the functional and nonfunctional requirements as well as use cases, the control flow, information about the database, behind the scene processes and external applications getdrinkrecpies.com will interface with. This document also contains the weekly reports.</p>
+<h2 id="system-overview">System Overview</h2>
+<p>getdrinkrecpies.com is a recipe website for people who like to cook and try new recipes but don't know which ingredients they need to use to make the drink of dish they want. Users can post, search, rate and review/comment on recipes as well as attach pictures to a recipe. </p>
+<p>People can input ingredients that they have in their kitchen/pantry and the website will  give them a list of recipes they can make with those ingredients. If the user picks a recipe to try and they don't have the ingredients a list of ingredients to buy will be generated for them. People can search for recipes by tag or by ingredients. If they want a more in-depth search they can filter searches. The user also has the ability to exclude ingredients from their searches.</p>
+<h2 id="team-recipe">Team Recipe</h2>
+<p>We're awesome and so much better than Team Scheduler.
+<strong>Design</strong> Andre Wiggins, Garrett Reuscher
+<strong>HTML/CSS</strong> Andre Wiggins, Garrett Reuscher
+<strong>Javascript/jQuery</strong> Benedicta Baidoo
+<strong>PHP</strong> Jason Brown, Kyler Edwards, Amanda Jaynes
+<strong>C#</strong> Amanda Jaynes
+<strong>Database</strong> Benedicta Baidoo
+<strong>Web server management</strong> Jason Brown
+Technical document Benedicta Baidoo, Kyler Edwards</p>
+<hr />
+<h1 id="software-architecture">Software Architecture</h1>
+<p><strong>Front End:</strong> HTML, CSS, Javascript, JQuery
+<strong>Back End:</strong> PHP
+<strong>Database:</strong> MySQL
+<strong>Web Server:</strong> getdrinkrecpies.com is hosted on Openshift which runs redhat linux. 
+<strong>Platform:</strong> any device with a web browser and internet connection</p>
+<hr />
+<h1 id="functional-requirements">Functional Requirements</h1>
+<h2 id="home-page">Home Page</h2>
+<p>Not logged in</p>
+<p><img alt="Home page not logged in" src="./img/design/homenotloggedin.png" /> </p>
+<p>Sign up/Log in (not logged in)</p>
+<p><img alt="Login / Sign up Page" src="./img/design/signup.png" />   </p>
+<h3 id="loginsign-up">Login/Sign up</h3>
+<p>The login/sign up prompt is going to be a pop up with the rest of the page grayed out.</p>
+<p>Logged in</p>
+<p><img alt="Home page logged in" src="./img/design/homeloggedin.png" /></p>
+<h3 id="recommended-recipes">Recommended Recipes</h3>
+<p>The recommended recipes are made up of recipes the user has favorited, saved for later, or have the same ingredients as recipes in their lists.</p>
+<h2 id="pantry-page">Pantry Page</h2>
+<p>List view</p>
+<p><img alt="Pantry Page list view" src="./img/design/pantrylist.png" /> </p>
+<h2 id="favorites-page">Favorites Page</h2>
+<p>List view</p>
+<p><img alt="Favorites Page list view" src="./img/design/favlist.png" /> </p>
+<p>Single view</p>
+<p><img alt="Favorites Page Single View" src="./img/design/favexpview.png" /> </p>
+<h2 id="search">Search</h2>
+<h3 id="regular-search">Regular Search</h3>
+<p>Not logged in</p>
+<p><img alt="Search Page not logged in" src="./img/design/searchnotloggedin.png" /> </p>
+<p>Logged in</p>
+<p><img alt="Search page Logged in" src="./img/design/searchloggedin.png" /> </p>
+<p>The search is a textbox with a button that says "search".
+Anyone can search for recipes. What they enter will be searched through ingredients and tags. No open searches. If an open search is attempted the search box will have a red border around it.</p>
+<p>The search results will be split between tag results and ingredient results.</p>
+<h3 id="advanced-search-filtering">Advanced Search Filtering</h3>
+<p>Not logged in</p>
+<p><img alt="Advanced Search Page Not Logged in" src="./img/design/advsearchnotloggedin.png" /> </p>
+<p>Logged in</p>
+<p><img alt="Advanced Search Page Logged in" src="./img/design/advsearchloggedin.png" /> </p>
+<p>Anyone can use the advanced search. The search will filter recipes as specified.
+No open searches allowed. A parameter must be given.</p>
+<p>Filters:
+- Recipes can be searched by:
+- Ingredient
+- Pantry List
+- Category/Sub-Category
+- Tag
+- Prep Time
+- Cook Time
+- Serving Number</p>
+<h2 id="recipe-of-the-day">Recipe of the Day</h2>
+<p>The right sidebar with a list of random recipes with the ingredient of the day. The recipes refresh every 5 minutes with another list of recipes.
+The recipes only list the name, a picture of the recipe and the ingredients that are used. The "view" takes the user to the recipe page with all the information.</p>
+<h2 id="recipe">Recipe</h2>
+<h3 id="create">Create</h3>
+<p>Only the user can create a recipe.</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Input Type</th>
+<th>Length</th>
+<th>Function / Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recipe ID</td>
+<td>auto generated</td>
+<td></td>
+<td>This isn't visible to anyone. It's just for the database and look up.</td>
+</tr>
+<tr>
+<td>Recipe name</td>
+<td>text field</td>
+<td></td>
+<td>The name of the recipe.</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>auto generated</td>
+<td></td>
+<td>The name of the user who is submitting the recipe.</td>
+</tr>
+<tr>
+<td>Ingredients</td>
+<td>text field</td>
+<td>no limit</td>
+<td>The user can input ingredients. Ingredients will be separated by a comma. when the user enters an ingredient, the text will be converted into a tag that can be deleted.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>text field</td>
+<td></td>
+<td>A description of the recipe.</td>
+</tr>
+<tr>
+<td>Instructions</td>
+<td>text field</td>
+<td></td>
+<td>Instruction for the recipe. Should be listed.</td>
+</tr>
+<tr>
+<td>Prep Time</td>
+<td>dropdown list</td>
+<td></td>
+<td>The user will pick from a predetermined selection of time intervals.</td>
+</tr>
+<tr>
+<td>Cook Time</td>
+<td>dropdown list</td>
+<td></td>
+<td>The user will pick from a predetermined selection of time intervals.</td>
+</tr>
+<tr>
+<td>Number of Servings</td>
+<td>text field</td>
+<td></td>
+<td>Number of servings.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>text field</td>
+<td>no limit</td>
+<td>Users can have their own.</td>
+</tr>
+<tr>
+<td>Date Submitted</td>
+<td>datetime</td>
+<td></td>
+<td>Date the recipe was submitted.</td>
+</tr>
+<tr>
+<td>Date Last Modified</td>
+<td>datetime</td>
+<td></td>
+<td>Date the recipe was last modified.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit">Edit</h3>
+<p>Only the user who created the recipe can edit the recipe. The user can edit any of the fields of their recipe except for the Recipe ID and username. The user clicks an "edit" button to edit a recipe. Each time the recipe is edited the modified date field will be updated.
+For tagging anyone can add tags to a recipe.</p>
+<h3 id="delete">Delete</h3>
+<p>Only the user who created the recipe can delete the recipe. The user clicks a red "delete" button to delete the recipe.</p>
+<h3 id="rate">Rate</h3>
+<p>Only users can rate a recipe. Guests will have to log in or make an account to rate the recipe.</p>
+<h3 id="users">Users</h3>
+<p>Only users will be able to submit recipes. They can submit as many recipes as they want.</p>
+<h3 id="recipe-to-make-list">Recipe To Make List</h3>
+<p>List of recipes the user wants to make. Ingredients in this list get compared with the ingredients in the pantry list.</p>
+<h3 id="pantry-list">Pantry List</h3>
+<p>A list of ingredients the user has available on hand.</p>
+<h3 id="shopping-list">Shopping List</h3>
+<p>System compares the ingredients in the recipe with the ingredients in the user's pantry list and auto generates a list of ingredients to get.</p>
+<h3 id="favorite-recipe-list">Favorite Recipe List</h3>
+<p>A list of the user's favorite recipes.</p>
+<h3 id="noeat-list">NoEat List</h3>
+<p>A list of ingredients that the user wants to exclude from all searches</p>
+<h2 id="future-features">Future Features</h2>
+<h3 id="meal-planner">Meal Planner</h3>
+<p>Picks a random assortment of recipes (that the user has and hasn't tried) that use ingredients in the user's pantry, and picks a recipe for the user to make for each meal of the week.
+Example: http://bit.ly/1Dqij3b</p>
+<h3 id="daily-recipe">Daily Recipe</h3>
+<p>Picks a random recipe that the user hasn't tried (possibly with some personal tailoring) and displays it on the home page.</p>
+<h3 id="conversion-of-ingredient-portions">Conversion of Ingredient Portions</h3>
+<p>Allows users to convert ingredient amounts to whatever they are most comfortable using. Would work as a drop down menu next to the ingredient amount on each recipe page.</p>
+<h3 id="recipe-cards">Recipe Cards</h3>
+<h2 id="recipes-can-be-exportedshared-to-social-media-as-different-templated-recipe-cards">Recipes can be exported/shared to social media as different templated recipe cards.</h2>
+<h1 id="database">Database</h1>
+<p>getdrinkrecpies.com uses a MySQL relational database.</p>
+<h2 id="entity-relation-diagram">Entity-Relation Diagram</h2>
+<p><img alt="ER Diagram" src="./img/db/recipeERDiagram_v3_150413.png" /> </p>
+<h2 id="tables">Tables</h2>
+<h3 id="brandingredients">BrandIngredients</h3>
+<p>This table connects brands and ingredients. Brands can have multiple ingredients and ingredients can be associated with multiple brands.</p>
+<p><img alt="BrankIgredients Table" src="./img/db/brandingrdients.png" /> </p>
+<h3 id="bands">Bands</h3>
+<p>This table is for the different brands, if users choose to include them. All entries in this table are unique, there can be no duplicates. Both users and administrators can add brands to this table.</p>
+<p><img alt="Bands Table" src="./img/db/brand.png" /> </p>
+<h3 id="favorites">Favorites</h3>
+<p>This table hold the recipes each user adds to their favorite list. A user can favorite any recipe but they can only favorite a recipe once.</p>
+<p><img alt="Favorites Table" src="./img/db/favorites.png" /> </p>
+<h3 id="ingredients">Ingredients</h3>
+<p>All the ingredients are stored in this table. Ingredients are food or drink items. The ingredients are unique, there can be no duplicates. Users and administrators can submit entries to this table. Only unique entries are accepted.</p>
+<p><img alt="Ingredients Table" src="./img/db/ingrdients.png" /> </p>
+<h3 id="ingredienttag">IngredientTag</h3>
+<p><img alt="IngredientTag Table" src="./img/db/ingredienttag.png" /> </p>
+<h3 id="measurements">Measurements</h3>
+<p>This table holds measurements used to measure ingredients. Only the database administrator can edit this table. Entries 1-15 are used for solid and dry foods, 9-18 are used for liquid foods and beverages and 19-21 are temperatures.</p>
+<p><img alt="Measurements Table" src="./img/db/measurements.png" /> </p>
+<p><img alt="Measurements Example" src="./img/db/measurementstable.png" /> </p>
+<h3 id="no-eat-list">No Eat List</h3>
+<p>This table is for ingredients the user doesn't want to be included in searches.</p>
+<p><img alt="No Eat List Table" src="./img/db/noeatlist.png" />  </p>
+<h3 id="pantry">Pantry</h3>
+<p>This table is for ingredients that the user already has with them.</p>
+<p><img alt="Pantry Table" src="./img/db/pantry.png" /> </p>
+<h3 id="ratings">Ratings</h3>
+<p>This table holds ratings that the user gives to the recipe. The user can only rate each recipe once.</p>
+<p><img alt="Ratings Table" src="./img/db/ratings.png" /> </p>
+<h3 id="recipe_1">Recipe</h3>
+<p>This table holds all of the recipes. </p>
+<p><img alt="Recipe Table" src="./img/db/recipe.png" /> </p>
+<h3 id="recipeingredients">RecipeIngredients</h3>
+<p>This table connects the recipe table and the ingredients table. Recipes can include many ingredients and ingredients can be associated with multiple recipes.</p>
+<p><img alt="RecipeIngredients Table" src="./img/db/recipeingrdeient.png" /> </p>
+<h3 id="recipetag">RecipeTag</h3>
+<p>This table connects the recipe with the tags. Recipes can be many tags and tags can be associated with many recipes.</p>
+<p><img alt="RecipeTag Table" src="./img/db/recipetag.png" /> </p>
+<h3 id="recipetomakelist">RecipeToMakeList</h3>
+<p>This table holds recipes that each user wants to make.</p>
+<p><img alt="RecipeToMakeList Table" src="./img/db/recipetomakelist.png" /> </p>
+<h3 id="tags">Tags</h3>
+<p>Tags cannot be ingredients. They describe the recipe, e.g. Mexican, Italian, Seafood. All tags are unique; there can be no duplicates. Users and administrators can add tags.</p>
+<p><img alt="Tags Table" src="./img/db/tags.png" /> </p>
+<h3 id="testtable">TestTable</h3>
+<p><img alt="TestTable Table" src="./img/db/testtable.png" /> </p>
+<h3 id="timeref">TimeRef</h3>
+<p>This table holds time denominations. Only the database administrator can edit this table. Time denominations are used for a recipe cook time and prep time.</p>
+<p><img alt="TimeRef Table" src="./img/db/timeref.png" /> </p>
+<p><img alt="TimeRef Example" src="./img/db/timereftable.png" /> </p>
+<h3 id="unverifiedimages">UnverifiedImages</h3>
+<p>Users can submit images to be associated with recipes. All images are monitored and checked for appropriateness. If the image is verified, it gets sent to the verified images table. All incoming images are sent to this table. No images from this table gets uploaded into the website.</p>
+<p><img alt="UnverifiedImages Table" src="./img/db/unverifiedimages.png" /> </p>
+<h3 id="useraccounts">UserAccounts</h3>
+<p>This table holds all of the users of the websites. Both the userID and the Username have to be unique. There can be no duplicates in the table.</p>
+<p><img alt="UserAccounts Table" src="./img/db/useraccounts.png" /> </p>
+<h3 id="verifiedimages">VerifiedImages</h3>
+<p>Images that are verified go into this table. Images from this table get uploaded on the website. </p>
+<p><img alt="VerifiedImages Table" src="./img/db/verifiedimages.png" /> </p>
+<h2 id="stored-procedures">Stored Procedures</h2>
+<p>There aren't any stored procedures yet for this database.</p>
+<hr />
+<h1 id="conclusion">Conclusion</h1>
+<p>The scope of the project was a great size in the beginning. However, towards the end more and more ideas were thrown in that should have been added. Had all these ideas been considered in the beginning, the scope still would have been ok.
+We learned that the project would have been better suited for a much smaller team. Two to three people would have been a better team size. Our team was disorganized and a lot of the time there just wasn't enough work for the entire team to be deeply involved. The project size was good however, because if the project where to grow to accommodate the team size our skill set wouldn't have been able to handle it. On a positive note, every member of the team learned a new technology, or improved a skill.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script src="./js/base.js"></script>
+
+        <!--
+        MkDocs version  : 0.12.2
+        Docs Build Date : 2015-04-28 07:19:45.944000
+        -->
+    </body>
+</html>

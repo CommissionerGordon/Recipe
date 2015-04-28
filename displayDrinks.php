@@ -63,16 +63,21 @@
     <br/>
     <?php
     /* Could this be eliminated by including the Connect.php
-     * and using $_GET["conn"]; */
+     * and using $_GET["conn"]; 
+	 * Maybe. Just use include instead. Thanks Benedicta!*/
     $dbhost = getenv("OPENSHIFT_MYSQL_DB_HOST");
     $dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
-    $dbuser = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-    $dbpwd = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+    $dbuser = "JBrown";//getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+    $dbpwd = "NOtoru78";//getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
     $dbname = getenv("OPENSHIFT_APP_NAME");
     $dbserver = $dbhost . ":" . $dbport;
     // Create connection
     $conn = new mysqli($dbserver, $dbuser, $dbpwd, $dbname);
-    
+    if(!conn) {
+				echo "No connection!<br>";
+			} else {
+				echo "Connection Successful!!!<br>";
+	}
         $ingredients = "SELECT DISTINCT ingrName FROM TestTable";
         $ingrResults = mysqli_query($conn, $ingredients);
         $totalIngr = mysqli_num_rows($ingrResults);

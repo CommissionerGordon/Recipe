@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Recipe</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="Header">
+<h1>Team Recipe</h1>
+        <div id="TaskBar"> 
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a id="NavSearchBtn">Search</a></li>
+                <li><a href="Profile.html">Profile</a></li>
+                <li><a href="Favorites.html">Favorites</a></li>
+                <li><a href="Pantry.html">Pantry</a></li>
+                <li><a href="WhatToMake.html">What to Make</a></li>
+                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="HomeDefault.html">Log Out</a></li>
+            </ul>
+        </div>
+</div>
+    <div id="Middle">
+        <div id="SearchBar" hidden>Search
+			<input id="search" name="search" type="text" placeholder="Search..."/>
+			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
+			<div id="AdvancedSearch" hidden>
+				<form action="test.php" method="get">
+					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
+					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
+					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+					<br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
+					<input type="text" name="Prep"><br>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Cook Time
+					<input type="text" name="Cook"><br>
+					<button type="submit" name="AdvSearchSubmitBtn" id="AdvSearchSubmitBtn">Submit</button><br>
+				</form>
+			</div>
+		</div>
+    
+	<div id="MainContent">
+        <h2>WELCOME!</h2>
+        
+		<h2>Favorite Recipes</h2>
+		<div class="FavoriteRecipes">
+			<h3>Vodka Float</h3>
+			<div class="FavoriteRecipeImage">
+			<img src="imgs/dixon.jpg">
+			</div>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="FavoriteRecipes">
+			<h3>Vodka Shake</h3>
+			<div class="FavoriteRecipeImage">Picture</div>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="FavoriteRecipes">
+			<h3>Vodka Malt</h3>
+			<div class="FavoriteRecipeImage">Picture</div>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="FavoriteRecipes">
+			<h3>Vodka Split</h3>
+			<div class="FavoriteRecipeImage">Picture</div>
+			<a href="#">VIEW</a>
+		</div>
+	</div>
+	<div id="Right">
+		<h2>Recommended Recipes</h2>
+		<div class="RecommendedRecipe">
+			<h3>Vodka Float</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="RecommendedRecipe">
+			<h3>Raspberry Brainsplosion</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+		
+		<div class="RecommendedRecipe">
+			<h3>Bloody Mary</h3>
+			<div class="RecipeImage">Picture</div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+			</ul>
+			<a href="#">VIEW</a>
+		</div>
+	</div>
+</div>
+
+<div id="Footer">
+	<ul>
+		<li>Copyright</li>
+		<li>Contact</li>
+		<li>Etc</li>
+	</ul>
+</div>
+
+<script src="js/main.js"></script>
+
+<?php include 'footer.php';?>
+</body>
+</html>

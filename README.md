@@ -1,5 +1,3 @@
-# CSC413_Recipe
----
 # Team Recipe
 Advanced Software Development<br>
 CSC413 Spring 2015<br>

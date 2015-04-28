@@ -1,4 +1,3 @@
 site_name: Recipe
 repo_url: https://github.com/CommissionerGordon/Recipe
-pages: 
-- [index.md, Home]
+theme: cosmo

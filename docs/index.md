@@ -24,22 +24,23 @@ People can input ingredients that they have in their kitchen/pantry and the webs
 
 ##Team Recipe
 We're awesome and so much better than Team Scheduler.
-**Design** Andre Wiggins, Garrett Reuscher
-**HTML/CSS** Andre Wiggins, Garrett Reuscher
-**Javascript/jQuery** Benedicta Baidoo
-**PHP** Jason Brown, Kyler Edwards, Amanda Jaynes
-**C#** Amanda Jaynes
-**Database** Benedicta Baidoo
-**Web server management** Jason Brown
-Technical document Benedicta Baidoo, Kyler Edwards
+
+**Design** Andre Wiggins, Garrett Reuscher<br>
+**HTML/CSS** Andre Wiggins, Garrett Reuscher<br>
+**Javascript/jQuery** Benedicta Baidoo<br>
+**PHP** Jason Brown, Kyler Edwards, Amanda Jaynes<br>
+**C#** Amanda Jaynes<br>
+**Database** Benedicta Baidoo<br>
+**Web server management** Jason Brown<br>
+**Technical document** Benedicta Baidoo, Kyler Edwards
 
 ---
 
 #Software Architecture
-**Front End:** HTML, CSS, Javascript, JQuery
-**Back End:** PHP
-**Database:** MySQL
-**Web Server:** getdrinkrecpies.com is hosted on Openshift which runs redhat linux. 
+**Front End:** HTML, CSS, Javascript, JQuery<br>
+**Back End:** PHP<br>
+**Database:** MySQL<br>
+**Web Server:** getdrinkrecpies.com is hosted on Openshift which runs redhat linux. <br>
 **Platform:** any device with a web browser and internet connection
 
 ---
@@ -79,6 +80,7 @@ Single view
 ![Favorites Page Single View] (/img/design/favexpview.png) 
 
 ##Search
+
 ###Regular Search
 Not logged in
 
@@ -92,6 +94,7 @@ The search is a textbox with a button that says "search".
 Anyone can search for recipes. What they enter will be searched through ingredients and tags. No open searches. If an open search is attempted the search box will have a red border around it.
 
 The search results will be split between tag results and ingredient results.
+
 ###Advanced Search Filtering
 Not logged in
 
@@ -168,6 +171,7 @@ A list of the user's favorite recipes.
 A list of ingredients that the user wants to exclude from all searches
 
 ##Future Features
+
 ###Meal Planner
 Picks a random assortment of recipes (that the user has and hasn't tried) that use ingredients in the user's pantry, and picks a recipe for the user to make for each meal of the week.
 Example: http://bit.ly/1Dqij3b
@@ -180,15 +184,18 @@ Allows users to convert ingredient amounts to whatever they are most comfortable
 
 ###Recipe Cards
 Recipes can be exported/shared to social media as different templated recipe cards.
+
 ---
 
 #Database
 getdrinkrecpies.com uses a MySQL relational database.
+
 ##Entity-Relation Diagram
 
 ![ER Diagram] (/img/db/recipeERDiagram_v3_150413.png) 
 
 ##Tables
+
 ###BrandIngredients
 This table connects brands and ingredients. Brands can have multiple ingredients and ingredients can be associated with multiple brands.
 

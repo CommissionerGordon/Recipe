@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title Name</title>
+<title>Add Recipe</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/addrecipe.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -16,24 +17,31 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
 </div>
 
 <div id="Middle">
+    
     <div id="SearchBar" hidden>Search
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -43,25 +51,40 @@
 				</form>
 			</div>
 		</div>
+    
 	<div id="MainContent">
 		<h2>New Recipe</h2>
-			<form action="demo_form.asp" method="get">
+			<form action="" method="post"><br>
 				<input type="radio" name="RecipeType" checked="checked"> Beverage<br>
 				<input type="radio" name="RecipeType"> Food<br>
-				Name: <input type="text" name="Name"><br>
-				<button>Upload Image</button><br>
-				Ingredients: <input type="text" name="Ingredient[]"> Tag: <input type="text" name="IngredientTag">
-					<div id="MoreIngredients" hidden><input type="text" name="Ingredient[]"> Tag: <input type="text" name="IngredientTag"></div>
-				<br>
-				Tags: <input type="text" name="Tags[]">
-					<div id="MoreTags" hidden><input type="text" name="Tags[]"></div>
-				<br>
-				Description: <input type="text" name="Description"><br>
-				Instructions: <input type="text" name="Instructions[]">
-					<div id="MoreInstructions" hidden><input type="text" name="Instructions[]"></div>
-				<br>
-				Serving Size: <input type="text" name="ServingSize"><br>
-				Prep Time:<select id = "Prep Times">
+                <hr />
+				<b>Recipe Name:</b> <input type="text" name="Name"><br><br><hr />
+				<!--<button id="NewRecipeUploadBtn" name="NewRecipeUploadBtn" type="button">Upload Image</button>-->
+                Upload an image of the completed product<br>
+                <input type="file" />
+                <br><br><hr />
+                <div id="IngridentsField">
+                    <b>Ingredients</b><br/>
+                    You can add a max of 25 ingredients.<br/>
+                    <div class="MorePlus" id="AddRecipeMoreIngrdient">Add another Ingedient</div><div><input type="text" name="Ingredient[]"></div>
+                </div>
+				
+				<br><br><hr />
+                <div id="TagsField">
+                    <b>Tags</b><br/>
+                    You can add a max of 10 tags.<br/><div class="MorePlus" id="AddRecipeMoreTag">Add another Tag</div><br>
+                    <div><input type="text" name="Tags[]"></div>
+                </div>
+				
+				<br><br><hr /><br>
+				<b>Description</b><br>
+                <textarea rows="8" cols="70" name="Description"></textarea>
+                <br><br>
+				<b>Instructions</b> <br>
+                <textarea rows="8" cols="70" name="Instructions"></textarea>
+				<br><br><hr />
+				<b>Serving Size:</b> <input type="text" name="ServingSize"><br>
+				<b>Prep Time:</b> <select id = "Prep Times">
 					<option value = "1">less than 1 minute</option>
 					<option value = "2">1-5 minutes</option>
 					<option value = "3">5-10 minutes</option>
@@ -77,7 +100,7 @@
 					<option value = "13">1 day</option>
 					<option value = "14">greater than 1 day</option>
 					</select><br>
-				Cook Time: <select id = "Cook Times">
+				<b>Cook Time:</b> <select id = "Cook Times">
 					<option value = "1">less than 1 minute</option>
 					<option value = "2">1-5 minutes</option>
 					<option value = "3">5-10 minutes</option>
@@ -93,7 +116,7 @@
 					<option value = "13">1 day</option>
 					<option value = "14">greater than 1 day</option>
 					</select><br>
-				<input type="submit" value="Submit"><button>Clear</button><br>
+                <button type="submit" name="NewRecipeSubmitBtn" id="NewRecipeSubmitBtn">Submit</button> <button type="reset" name="NewRecipeClearBtn" id="NewRecipeClearBtn">Clear</button><br>
 			</form>
 	</div>
 </div>

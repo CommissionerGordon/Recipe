@@ -1,0 +1,133 @@
+/* Profile */
+
+a, a:visited {
+    text-decoration: none;
+    text-transform: none;
+    color: #1c59bc;
+}
+
+a:active, a:hover {
+    text-decoration: underline;
+    text-transform: none;
+    color: #3b80ef;
+}
+
+#UserProfile {
+    background-color: #fff;
+    
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    width: 65%;
+    
+}
+
+#UserProfile h2 {
+    margin: 10px;
+    padding: 0px;
+}
+
+#UserProfile img {
+    margin: 10px;
+    padding: 0px;
+}
+
+#UserProfile ul {
+    list-style-type: none;
+}
+
+#UserProfile li {
+    display: block;
+    padding: 2px;
+}
+
+#UserProfile button {
+    width: 100px;
+    
+    margin: 0px;
+    padding: 0px;
+    margin-right: 3px;
+    padding: 3px;
+    
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+#EditButton {
+    float: right;
+    width: 100px;
+    
+    text-align: center;
+    
+    margin: 0px;
+    padding: 0px;
+    margin-right: 3px;
+    padding: 3px;
+    
+    color: #fff;
+    cursor: pointer;
+    
+    background-color: #ff8558;
+    border: none;
+    border-bottom: solid 2px orangered;
+}
+
+#EditButton a, #EditButton a:visited {
+    text-decoration: none;
+    text-transform: none;
+    color: #fff;
+}
+
+#EditButton a:active, #EditButton a:hover {
+    text-decoration: none;
+    text-transform: none;
+    color: orangered;
+}
+
+#UserDescription {
+    text-align: justify;
+    margin: 10px;
+}
+
+#UserProfile form {
+    margin-top: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#UserProfile textarea {
+    margin: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    
+    border: none;
+    border-bottom: solid 2px #3b80ef;
+    background-color: #b9d3fd;
+}
+
+#ProfileUploadImgBtn {
+    background-color: #3b80ef;
+    border: none;
+    border-bottom: solid 2px #1c59bc;
+}
+
+#ProfileSubmitBtn {
+    float: right;
+    
+    background-color: #3b80ef;
+    border: none;
+    border-bottom: solid 2px #1c59bc;
+}
+
+#ProfileClearBtn {
+    float: right;
+    
+    background-color: #3b80ef;
+    border: none;
+    border-bottom: solid 2px #1c59bc;
+}

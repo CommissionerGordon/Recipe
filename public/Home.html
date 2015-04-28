@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title Name</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
     <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
@@ -27,13 +27,19 @@
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -50,64 +56,64 @@
 		<h2>Favorite Recipes</h2>
 		<div class="FavoriteRecipes">
 			<h3>Vodka Float</h3>
-			<div class="FavoriteRecipeImage">Picture</div>
-			<a href="#">VIEW</a>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 		
 		<div class="FavoriteRecipes">
 			<h3>Vodka Shake</h3>
-			<div class="FavoriteRecipeImage">Picture</div>
-			<a href="#">VIEW</a>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 		
 		<div class="FavoriteRecipes">
 			<h3>Vodka Malt</h3>
-			<div class="FavoriteRecipeImage">Picture</div>
-			<a href="#">VIEW</a>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 		
 		<div class="FavoriteRecipes">
 			<h3>Vodka Split</h3>
-			<div class="FavoriteRecipeImage">Picture</div>
-			<a href="#">VIEW</a>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 	</div>
 	<div id="Right">
 		<h2>Recommended Recipes</h2>
 		<div class="RecommendedRecipe">
 			<h3>Vodka Float</h3>
-			<div class="RecipeImage">Picture</div>
+			<div class="RecipeImage"><img src="http://devimg.com/100x100/food" /></div>
 			<h4>Recipe Submitter</h4>
 			<ul>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 			</ul>
-			<a href="#">VIEW</a>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 		
 		<div class="RecommendedRecipe">
 			<h3>Raspberry Brainsplosion</h3>
-			<div class="RecipeImage">Picture</div>
+			<div class="RecipeImage"><img src="http://devimg.com/100x100/food" /></div>
 			<h4>Recipe Submitter</h4>
 			<ul>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 			</ul>
-			<a href="#">VIEW</a>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 		
 		<div class="RecommendedRecipe">
 			<h3>Bloody Mary</h3>
-			<div class="RecipeImage">Picture</div>
+			<div class="RecipeImage"><img src="http://devimg.com/100x100/food" /></div>
 			<h4>Recipe Submitter</h4>
 			<ul>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 			</ul>
-			<a href="#">VIEW</a>
+			<a href="Recipe.html">VIEW</a>
 		</div>
 	</div>
 </div>

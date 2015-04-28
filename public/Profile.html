@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title Name</title>
+<title>Profile</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -17,24 +18,31 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
 </div>
 
 <div id="Middle">
+    
     <div id="SearchBar" hidden>Search
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -44,17 +52,22 @@
 				</form>
 			</div>
 		</div>
+    
 	<div id="MainContent">
-		<h2>(User Name)</h2>
-			
-			<div id="EditButton" hidden><button>EDIT</button></div>
-			
-			<img src="http://devimg.com/100x100/movies" />
-			
-			<li><a href="#">Favorites</a></li>
-			<li><a href="#">Recipes this user has submitted</a></li>
-			
-			<p>User description....</p>
+		<div id="UserProfile">
+            <h2>(User Name)</h2>
+            <a href="EditProfile.html"><div id="EditButton">Edit</div></a>
+            <img src="http://devimg.com/100x100/movies" />
+            <ul>
+                <li><a href="#">Favorites</a></li>
+                <li><a href="Recipe.html">Recipes this user has submitted</a></li>
+            </ul>	
+            <div id="UserDescription">
+                <p>Bacon ipsum dolor amet corned beef tri-tip venison shankle tongue, chicken capicola turducken jerky pancetta shoulder short loin t-bone. Pork chop meatball short ribs swine, jowl pastrami fatback corned beef alcatra bresaola cupim. Spare ribs sausage sirloin meatball ball tip meatloaf. Prosciutto tongue boudin, sirloin short ribs pork chop beef.</p>
+                <p>Pastrami filet mignon doner sausage shoulder meatloaf flank rump venison ball tip. Tri-tip ball tip corned beef sirloin tongue pork belly. Fatback t-bone leberkas kevin. Venison strip steak frankfurter tri-tip hamburger bacon tail t-bone ball tip pork belly kielbasa picanha. Alcatra frankfurter ball tip bacon pork meatloaf. Ribeye corned beef tenderloin jowl sausage short loin kevin pancetta ham flank. Bacon landjaeger ham hock, sirloin tenderloin pork beef brisket shoulder venison pastrami beef ribs spare ribs jerky.</p>
+                <p>Ham jowl pancetta andouille. Bacon short loin pancetta venison beef. Brisket flank ham rump sausage pork belly short ribs cupim jerky andouille t-bone meatloaf. Sausage venison ball tip ground round corned beef bresaola t-bone ham drumstick spare ribs pancetta cow pork. Filet mignon corned beef bacon jerky, prosciutto brisket kielbasa sausage meatloaf pork loin beef jowl short ribs biltong shank.</p>
+            </div>
+        </div>
 	</div>
 </div>
 

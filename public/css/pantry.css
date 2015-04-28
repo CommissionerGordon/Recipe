@@ -1,0 +1,45 @@
+/* Pantry */
+
+#Pantry {
+    background-color: #fff;
+    margin: 0px;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+    width: 500px;
+    
+}
+
+#Pantry button {
+    display: inline-block;
+    width: 100px;
+    
+    margin: 0px;
+    padding: 0px;
+    margin-right: 3px;
+    padding: 3px;
+    
+    color: #fff;
+    cursor: pointer;
+}
+
+#AddNewItemBtn {
+    background-color: #3b80ef;
+    border: none;
+    border-bottom: solid 2px #1c59bc;
+}
+
+.PantryEntries {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    border-bottom: solid 2px #000;
+}
+
+.PantryDeleteBtn {
+    float: right;
+    background-color: #fc2f2f;
+    border: none;
+    border-bottom: solid 2px #af0a0a;
+}
+

@@ -3,12 +3,13 @@
 <head>
 <title>Title Name</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/recipe.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -28,13 +29,19 @@
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -46,42 +53,54 @@
 		</div>
     
 	<div id="MainContent">
+        <div id="RecipeContent">
+            <a><div id="EditButton">EDIT</div></a>
+            <h2><span id="RecipeName">(Recipe Name)</span></h2>
+            <div id="SubmitterInfo"><p>
+                <b>Submitted By:</b> <span id="RecipeUserName"> cupcakelvr</span><br/>
+                <b>Date Submitted:</b> <span id="RecipeDateSubmitted"></span>yesterday<br/>
+                <b>Last Modified:</b> <span id="RecipeLastModified"></span>yesterday<br/>
+                </p>
+            </div>
+            <div id="RatingBox">
+                Rate It!: <select id = "Rating">
+				    <option value = "1">1</option>
+				    <option value = "2">2</option>
+				    <option value = "3">3</option>
+				    <option value = "4">4</option>
+				    <option value = "5">5</option>
+                </select> <button type="submit" id="RateSubmitBtn" name="RateSubmitBtn">Submit</button><br>
+            </div>
+			<img src="http://devimg.com/100x100/food" />
+            <div id="RecipeInfo">
+                    
+                    <b>Number of Servings:</b> <span id="RecipeServingSize"></span>1<br/><br/>
+                    <b>Ingredients:</b><br> 
+                        <div id="RecipeIngredients">
+                            <ul>
+				                <li>Blueberries</li>
+				                <li>Eggs</li>
+				                <li>Cupcake batter</li>
+                                <li>Cupcakes</li>
+			                 </ul>
+                        </div>
+                    <b>Description:</b> <span id="RecipeDescription"></span>A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> <span id="RecipeInstructions"></span>Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> ><span id="RecipePrepTime"></span>1 min<br/><br/>
+                    <b>Cook Time:</b> <span id="RecipeCookTime"></span>0 mins<br/><br/>
+                    
+                    <b>Tags:</b><br>
+					<div id="RecipeTags">
+						<ul>
+							<li>Tag1</li>
+							<li>Tag2</li>
+							<li>Tag3</li>
+						</ul>
+					</div><br/><br/>
+            </div>
+            
+        </div>
 		
-		<h2>(Recipe Name)</h2>
-			
-			<div id="EditButton" hidden><button>EDIT</button></div>
-			
-			Rate It!: <select id = "Rating">
-				<option value = "1">1</option>
-				<option value = "2">2</option>
-				<option value = "3">3</option>
-				<option value = "4">4</option>
-				<option value = "5">5</option>
-			</select><br>
-			<input type="submit" value="Submit"><br>
-					
-			<img src="http://devimg.com/100x100/movies" />
-			
-			<ul>
-				<li>Tag</li>
-				<div class="Tagz" hidden><li>Tag</li></div>
-			</ul>
-			
-			<ul>
-				<li>Ingredient Name</li>
-				<div class="Ingredientz" hidden><li>Ingredient Name</li></div>
-			</ul>
-			
-			<p>Description....</p>
-			
-			<h5>Prep Time</h5>
-			<h5>Cooking Time</h5>
-			<h5>Serving Size</h5>
-			
-			<ol>
-				<li>Step</li>
-				<div class="Steps" hidden><li>Step</li></div>
-			</ol>
 	</div>
 </div>
 

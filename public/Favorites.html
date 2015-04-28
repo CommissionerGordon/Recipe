@@ -3,12 +3,13 @@
 <head>
 <title>Title Name</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/favrecipies.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -17,24 +18,31 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
 </div>
 
 <div id="Middle">
+    
     <div id="SearchBar" hidden>Search
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -44,19 +52,121 @@
 				</form>
 			</div>
 		</div>
+    
 	<div id="MainContent">
 		<h2>Favorite Recipes</h2>
 		<div class="FavoriteRecipes">
 			<h3>Vodka Float</h3>
-			<div class="FavoriteRecipeImage">Picture</div>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
 			<h4>Recipe Submitter</h4>
 			<ul>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
-				<li>Ingredient</li>
+				<li>Blueberries</li>
+				<li>Eggs</li>
+				<li>Cupcake batter</li>
+                <li>Cupcakes</li>
 			</ul>
-			<a href="#">VIEW</a>
+			<a class="favExpandBtn">VIEW</a>
+            <div class="favExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
 		</div>
+        
+        <div class="FavoriteRecipes">
+			<h3>Vodka Float</h3>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Blueberries</li>
+				<li>Eggs</li>
+				<li>Cupcake batter</li>
+                <li>Cupcakes</li>
+			</ul>
+			<a class="favExpandBtn">VIEW</a>
+            <div class="favExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
+		</div>
+        
+        <div class="FavoriteRecipes">
+			<h3>Vodka Float</h3>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Blueberries</li>
+				<li>Eggs</li>
+				<li>Cupcake batter</li>
+                <li>Cupcakes</li>
+			</ul>
+			<a class="favExpandBtn">VIEW</a>
+            <div class="favExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
+		</div>
+        
+        <div class="FavoriteRecipes">
+			<h3>Vodka Float</h3>
+			<div class="FavoriteRecipeImage"><img src="http://devimg.com/150x100/food" /></div>
+			<h4>Recipe Submitter</h4>
+			<ul>
+				<li>Blueberries</li>
+				<li>Eggs</li>
+				<li>Cupcake batter</li>
+                <li>Cupcakes</li>
+			</ul>
+			<a class="favExpandBtn">VIEW</a>
+            <div class="favExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
+		</div>
+        
 	</div>
 </div>
 

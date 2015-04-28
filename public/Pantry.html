@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title Name</title>
+<title>Pantry</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pantry.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -17,7 +18,7 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
@@ -28,13 +29,19 @@
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -47,16 +54,50 @@
     
 	<div id="MainContent">
 		<h2>My Pantry</h2>
-		<div id="PantryHeading">
-			<h4>ITEM NAME</h4>
+        <div id="Pantry">
+            <button id="AddNewItemBtn">Add New Item</button>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Milk</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Orange Juice</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Apple Juice</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Water</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Malta Goya</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Cranberry Juice</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Strawberry Milk</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Chocolate Milk</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Sprite</h4>
+            </div>
+            <div class="PantryEntries">
+                <button class="PantryDeleteBtn">Delete Item</button>
+              <h4>Coke</h4>
+            </div>
+            
 		</div>
-		
-		<div class="PantryEntries">
-			<h4>Item Name</h4>
-			<button>Delete Item</button>
-		</div>
-		
-		<button>Add New Item</button>
 	</div>
 </div>
 

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Title Name</title>
+<title>Your Recipes</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/yourrecipes.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
 
 <div id="Header">
-<h1>My Title</h1>
+<h1>getdrinkrecpies.com</h1>
         <div id="TaskBar"> 
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -17,7 +18,7 @@
                 <li><a href="Favorites.html">Favorites</a></li>
                 <li><a href="Pantry.html">Pantry</a></li>
                 <li><a href="WhatToMake.html">What to Make</a></li>
-                <li><a href="Recipe.html">Your Recipe</a></li>
+                <li><a href="YourRecipes.html">Your Recipe</a></li>
                 <li><a href="HomeDefault.html">Log Out</a></li>
             </ul>
         </div>
@@ -28,13 +29,19 @@
 			<input id="search" name="search" type="text" placeholder="Search..."/>
 			<button id="SearchSubmitBtn" name="SearchSubmitBtn" type="submit">Search</button> <button id="AdvSearchBtn" name="AdvSearchBtn">Adv. Search</button> 
 			<div id="AdvancedSearch" hidden>
-				<form action="test.php" method="get">
+                You can filter the search for up to 5 ingrdients and tags.<br/><br/>
+				<form action="" method="get">
 					<input type="checkbox" name="AdvancedSearchField[]"> By Pantry List<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient
-					<input type="text" name="Ingredient[]"><div id="MoreIngredients">+</div>
+					<input type="checkbox" name="AdvancedSearchField[]"> By Ingredient<div id="MoreIngredients" class="AddMoreFields">+</div><br/>
+                    <div id="SearchIngrdientsWrapper">
+                        <div><input type="text" name="Ingredient[]"></div>
+                    </div>
 					<br>
-					<input type="checkbox" name="AdvancedSearchField[]"> By Tag
-					<input type="text" name="Tag[]"><div id="MoreTags">+</div>
+                    <input type="checkbox" name="AdvancedSearchField[]"> By Tag <div id="MoreTags" class="AddMoreFields">+</div><br />
+                    <div id="SearchTagsWrapper">
+                        <div><input type="text" name="Tag[]"></div>
+                    </div>
+					
 					<br>
 					<input type="checkbox" name="AdvancedSearchField[]"> By Prep Time
 					<input type="text" name="Prep"><br>
@@ -48,20 +55,85 @@
 	<div id="MainContent">
 		
 		<h2>Your Recipes</h2>
+        <a href="AddNewRecipe.html"><div id="AddNewRecipeBtn">Add New Recipe</div></a>
 		<div class="YourRecipes">
+            <button class="YouRecipeEditBtn">Edit</button> <button class="YouRecipeDeleteBtn">Delete</button>
 			<h3>Vodka Float</h3>
-			<div class="YourRecipesRecipeImage">Picture</div>
-			<ul>
+			<div class="YourRecipesRecipeImage"><img src="http://devimg.com/150x100/food"></div>
+            <ul>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
 				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                
 			</ul>
-			<a href="#">VIEW</a>
-
-			<button>Delete</button>
+			<a class="YouRecipesExpandBtn">VIEW</a>
+            <div class="YouRecipesExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
+            
 		</div>
-		
-		<button>Add New Recipe</button>
+        
+        <div class="YourRecipes">
+            <button class="YouRecipeEditBtn">Edit</button> <button class="YouRecipeDeleteBtn">Delete</button>
+			<h3>Vodka Float</h3>
+			<div class="YourRecipesRecipeImage"><img src="http://devimg.com/150x100/food"></div>
+            <ul>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+				<li>Ingredient</li>
+                <li>Ingredient</li>
+				<li>Ingredient</li>
+                
+			</ul>
+			<a class="YouRecipesExpandBtn">VIEW</a>
+            <div class="YouRecipesExpand" hidden>
+                <p>
+                    <b>Name:</b> Blueberry cupcakes<br/><br/>
+                    <b>Submitted By:</b> cupcakelvr<br/><br/>
+                    <b>Date Submitted:</b> yesterday<br/><br/>
+                    <b>Last Modified:</b> yesterday<br/><br/>
+                    <b>Number of Servings:</b> 1<br/><br/>
+                    <b>Description:</b> A recipe for blueberry cupcakes<br/><br/>
+                    <b>Instructions:</b> Eat the cupcakes and then eat the blueberries.<br/><br/>
+                    <b>Prep Time:</b> >1 min<br/><br/>
+                    <b>Cook Time:</b> 0 mins<br/><br/>
+                    
+                    <b>Tags:</b> desert<br/><br/>
+                </p>
+            </div>
+            
+		</div>
+        
 	</div>
 </div>
 

@@ -226,100 +226,57 @@ getdrinkrecpies.com uses a MySQL relational database.
 ###BrandIngredients
 This table connects brands and ingredients. Brands can have multiple ingredients and ingredients can be associated with multiple brands.
 
-![BrankIgredients Table] (/img/db/brandingrdients.png) 
-
 ###Bands
 This table is for the different brands, if users choose to include them. All entries in this table are unique, there can be no duplicates. Both users and administrators can add brands to this table.
-
-![Bands Table] (/img/db/brand.png) 
 
 ###Favorites
 This table hold the recipes each user adds to their favorite list. A user can favorite any recipe but they can only favorite a recipe once.
 
-![Favorites Table] (/img/db/favorites.png) 
-
 ###Ingredients
 All the ingredients are stored in this table. Ingredients are food or drink items. The ingredients are unique, there can be no duplicates. Users and administrators can submit entries to this table. Only unique entries are accepted.
 
-![Ingredients Table] (/img/db/ingrdients.png) 
-
 ###IngredientTag
 
-![IngredientTag Table] (/img/db/ingredienttag.png) 
+This table connects the ingredients and the tags.
 
 ###Measurements
-This table holds measurements used to measure ingredients. Only the database administrator can edit this table. Entries 1-15 are used for solid and dry foods, 9-18 are used for liquid foods and beverages and 19-21 are temperatures.
-
-![Measurements Table] (/img/db/measurements.png) 
-
-![Measurements Example] (/img/db/measurementstable.png) 
+This table holds measurements used to measure ingredients. Only the database administrator can edit this table. Entries 1-15 are used for solid and dry foods, 9-18 are used for liquid foods and beverages and 19-21 are temperatures. 
 
 ###No Eat List
-This table is for ingredients the user doesn't want to be included in searches.
-
-![No Eat List Table] (/img/db/noeatlist.png)  
+This table is for ingredients the user doesn't want to be included in searches.  
 
 ###Pantry
-This table is for ingredients that the user already has with them.
-
-![Pantry Table] (/img/db/pantry.png) 
+This table is for ingredients that the user already has with them. 
 
 ###Ratings
 This table holds ratings that the user gives to the recipe. The user can only rate each recipe once.
 
-![Ratings Table] (/img/db/ratings.png) 
-
 ###Recipe
 This table holds all of the recipes. 
 
-![Recipe Table] (/img/db/recipe.png) 
-
 ###RecipeIngredients
-This table connects the recipe table and the ingredients table. Recipes can include many ingredients and ingredients can be associated with multiple recipes.
-
-![RecipeIngredients Table] (/img/db/recipeingrdeient.png) 
+This table connects the recipe table and the ingredients table. Recipes can include many ingredients and ingredients can be associated with multiple recipes. 
 
 ###RecipeTag
 This table connects the recipe with the tags. Recipes can be many tags and tags can be associated with many recipes.
 
-![RecipeTag Table] (/img/db/recipetag.png) 
-
 ###RecipeToMakeList
 This table holds recipes that each user wants to make.
-
-![RecipeToMakeList Table] (/img/db/recipetomakelist.png) 
 
 ###Tags
 Tags cannot be ingredients. They describe the recipe, e.g. Mexican, Italian, Seafood. All tags are unique; there can be no duplicates. Users and administrators can add tags.
 
-![Tags Table] (/img/db/tags.png) 
-
-###TestTable
-
-![TestTable Table] (/img/db/testtable.png) 
-
 ###TimeRef
 This table holds time denominations. Only the database administrator can edit this table. Time denominations are used for a recipe cook time and prep time.
-
-![TimeRef Table] (/img/db/timeref.png) 
-
-![TimeRef Example] (/img/db/timereftable.png) 
 
 ###UnverifiedImages
 Users can submit images to be associated with recipes. All images are monitored and checked for appropriateness. If the image is verified, it gets sent to the verified images table. All incoming images are sent to this table. No images from this table gets uploaded into the website.
 
-![UnverifiedImages Table] (/img/db/unverifiedimages.png) 
-
 ###UserAccounts
 This table holds all of the users of the websites. Both the userID and the Username have to be unique. There can be no duplicates in the table.
 
-![UserAccounts Table] (/img/db/useraccounts.png) 
-
 ###VerifiedImages
 Images that are verified go into this table. Images from this table get uploaded on the website. 
-
-![VerifiedImages Table] (/img/db/verifiedimages.png) 
-
 
 <br><br><br>
 #Conclusion

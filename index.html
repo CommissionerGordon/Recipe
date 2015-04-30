@@ -356,61 +356,40 @@ Example: http://bit.ly/1Dqij3b</p>
 <h2 id="tables">Tables</h2>
 <h3 id="brandingredients">BrandIngredients</h3>
 <p>This table connects brands and ingredients. Brands can have multiple ingredients and ingredients can be associated with multiple brands.</p>
-<p><img alt="BrankIgredients Table" src="./img/db/brandingrdients.png" /> </p>
 <h3 id="bands">Bands</h3>
 <p>This table is for the different brands, if users choose to include them. All entries in this table are unique, there can be no duplicates. Both users and administrators can add brands to this table.</p>
-<p><img alt="Bands Table" src="./img/db/brand.png" /> </p>
 <h3 id="favorites">Favorites</h3>
 <p>This table hold the recipes each user adds to their favorite list. A user can favorite any recipe but they can only favorite a recipe once.</p>
-<p><img alt="Favorites Table" src="./img/db/favorites.png" /> </p>
 <h3 id="ingredients">Ingredients</h3>
 <p>All the ingredients are stored in this table. Ingredients are food or drink items. The ingredients are unique, there can be no duplicates. Users and administrators can submit entries to this table. Only unique entries are accepted.</p>
-<p><img alt="Ingredients Table" src="./img/db/ingrdients.png" /> </p>
 <h3 id="ingredienttag">IngredientTag</h3>
-<p><img alt="IngredientTag Table" src="./img/db/ingredienttag.png" /> </p>
+<p>This table connects the ingredients and the tags.</p>
 <h3 id="measurements">Measurements</h3>
-<p>This table holds measurements used to measure ingredients. Only the database administrator can edit this table. Entries 1-15 are used for solid and dry foods, 9-18 are used for liquid foods and beverages and 19-21 are temperatures.</p>
-<p><img alt="Measurements Table" src="./img/db/measurements.png" /> </p>
-<p><img alt="Measurements Example" src="./img/db/measurementstable.png" /> </p>
+<p>This table holds measurements used to measure ingredients. Only the database administrator can edit this table. Entries 1-15 are used for solid and dry foods, 9-18 are used for liquid foods and beverages and 19-21 are temperatures. </p>
 <h3 id="no-eat-list">No Eat List</h3>
-<p>This table is for ingredients the user doesn't want to be included in searches.</p>
-<p><img alt="No Eat List Table" src="./img/db/noeatlist.png" />  </p>
+<p>This table is for ingredients the user doesn't want to be included in searches.  </p>
 <h3 id="pantry">Pantry</h3>
-<p>This table is for ingredients that the user already has with them.</p>
-<p><img alt="Pantry Table" src="./img/db/pantry.png" /> </p>
+<p>This table is for ingredients that the user already has with them. </p>
 <h3 id="ratings">Ratings</h3>
 <p>This table holds ratings that the user gives to the recipe. The user can only rate each recipe once.</p>
-<p><img alt="Ratings Table" src="./img/db/ratings.png" /> </p>
 <h3 id="recipe_1">Recipe</h3>
 <p>This table holds all of the recipes. </p>
-<p><img alt="Recipe Table" src="./img/db/recipe.png" /> </p>
 <h3 id="recipeingredients">RecipeIngredients</h3>
-<p>This table connects the recipe table and the ingredients table. Recipes can include many ingredients and ingredients can be associated with multiple recipes.</p>
-<p><img alt="RecipeIngredients Table" src="./img/db/recipeingrdeient.png" /> </p>
+<p>This table connects the recipe table and the ingredients table. Recipes can include many ingredients and ingredients can be associated with multiple recipes. </p>
 <h3 id="recipetag">RecipeTag</h3>
 <p>This table connects the recipe with the tags. Recipes can be many tags and tags can be associated with many recipes.</p>
-<p><img alt="RecipeTag Table" src="./img/db/recipetag.png" /> </p>
 <h3 id="recipetomakelist">RecipeToMakeList</h3>
 <p>This table holds recipes that each user wants to make.</p>
-<p><img alt="RecipeToMakeList Table" src="./img/db/recipetomakelist.png" /> </p>
 <h3 id="tags">Tags</h3>
 <p>Tags cannot be ingredients. They describe the recipe, e.g. Mexican, Italian, Seafood. All tags are unique; there can be no duplicates. Users and administrators can add tags.</p>
-<p><img alt="Tags Table" src="./img/db/tags.png" /> </p>
-<h3 id="testtable">TestTable</h3>
-<p><img alt="TestTable Table" src="./img/db/testtable.png" /> </p>
 <h3 id="timeref">TimeRef</h3>
 <p>This table holds time denominations. Only the database administrator can edit this table. Time denominations are used for a recipe cook time and prep time.</p>
-<p><img alt="TimeRef Table" src="./img/db/timeref.png" /> </p>
-<p><img alt="TimeRef Example" src="./img/db/timereftable.png" /> </p>
 <h3 id="unverifiedimages">UnverifiedImages</h3>
 <p>Users can submit images to be associated with recipes. All images are monitored and checked for appropriateness. If the image is verified, it gets sent to the verified images table. All incoming images are sent to this table. No images from this table gets uploaded into the website.</p>
-<p><img alt="UnverifiedImages Table" src="./img/db/unverifiedimages.png" /> </p>
 <h3 id="useraccounts">UserAccounts</h3>
 <p>This table holds all of the users of the websites. Both the userID and the Username have to be unique. There can be no duplicates in the table.</p>
-<p><img alt="UserAccounts Table" src="./img/db/useraccounts.png" /> </p>
 <h3 id="verifiedimages">VerifiedImages</h3>
 <p>Images that are verified go into this table. Images from this table get uploaded on the website. </p>
-<p><img alt="VerifiedImages Table" src="./img/db/verifiedimages.png" /> </p>
 <p><br><br><br></p>
 <h1 id="conclusion">Conclusion</h1>
 <hr />

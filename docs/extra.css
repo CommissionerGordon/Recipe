@@ -1,0 +1,35 @@
+div.col-md-9 h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+div.col-md-9 h1 a, div.col-md-9 h1 a:visited {
+    text-decoration: none;
+    text-transform: none;
+    color: #f4b16b;
+}
+
+div.col-md-9 h1 a:hover, div.col-md-9 h1 a:active {
+    text-decoration: none;
+    text-transform: none;
+    color: #e49039;
+}
+
+div.col-md-9 h3 {
+    font-size: 20px;
+}
+
+div.col-md-9 p:first-of-type {
+    text-align: center;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: 10px;
+}

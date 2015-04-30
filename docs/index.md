@@ -1,42 +1,47 @@
-﻿
-#getdrinkrecpies.com
-
+#[getdrinkrecpies.com](http://csc413-recipefinal.rhcloud.com/)
 Team Recipe<br>
 CSC 413 Advanced Software Development I<br>
 Spring 2015<br>
 
----
 
+<br><br><br>
 #Introduction
-[getdrinkrecpies.com](http://csc413-recipefinal.rhcloud.com/)
-[Github](https://github.com/CommissionerGordon/Recipe)
+
+---
 
 ##Purpose
 The purpose of this document is to serve as a guide to designers, developers, and testers who are responsible for the engineering of the getdrinkrecpies.com project. it should give the engineers all of the information necessary to design, develop and test the software.
 
+---
+
 ##Scope
 This document contains a complete description of the functionality or the getdrinkrecpies.com project. It includes the functional and nonfunctional requirements as well as use cases, the control flow, information about the database, behind the scene processes and external applications getdrinkrecpies.com will interface with. This document also contains the weekly reports.
+
+---
 
 ##System Overview
 getdrinkrecpies.com is a recipe website for people who like to cook and try new recipes but don't know which ingredients they need to use to make the drink of dish they want. Users can post, search, rate and review/comment on recipes as well as attach pictures to a recipe. 
 
 People can input ingredients that they have in their kitchen/pantry and the website will  give them a list of recipes they can make with those ingredients. If the user picks a recipe to try and they don't have the ingredients a list of ingredients to buy will be generated for them. People can search for recipes by tag or by ingredients. If they want a more in-depth search they can filter searches. The user also has the ability to exclude ingredients from their searches.
 
-##Team Recipe
-We're awesome and so much better than Team Scheduler.
+---
 
-**Design** Andre Wiggins, Garrett Reuscher<br>
-**HTML/CSS** Andre Wiggins, Garrett Reuscher<br>
-**Javascript/jQuery** Benedicta Baidoo<br>
-**PHP** Jason Brown, Kyler Edwards, Amanda Jaynes<br>
-**C#** Amanda Jaynes<br>
-**Database** Benedicta Baidoo<br>
-**Web server management** Jason Brown<br>
-**Technical document** Benedicta Baidoo, Kyler Edwards
+##Team Recipe
+**Design:** Andre Wiggins, Garrett Reuscher<br>
+**HTML/CSS:** Andre Wiggins, Garrett Reuscher<br>
+**Javascript/jQuery:** Benedicta Baidoo<br>
+**PHP:** Jason Brown, Kyler Edwards, Amanda Jaynes<br>
+**C#:** Amanda Jaynes<br>
+**Database:** Benedicta Baidoo<br>
+**Web server management:** Jason Brown<br>
+**Technical document:** Benedicta Baidoo, Kyler Edwards
+
+
+<br><br><br>
+#Software Architecture
 
 ---
 
-#Software Architecture
 **Front End:** HTML, CSS, Javascript, JQuery<br>
 **Back End:** PHP<br>
 **Database:** MySQL<br>
@@ -44,8 +49,10 @@ We're awesome and so much better than Team Scheduler.
 **Platform:** any device with a web browser and internet connection
 
 ---
-
+<br><br><br>
 #Functional Requirements
+
+---
 
 ##Home Page
 Not logged in
@@ -65,10 +72,15 @@ Logged in
 
 ###Recommended Recipes
 The recommended recipes are made up of recipes the user has favorited, saved for later, or have the same ingredients as recipes in their lists.
+
+---
+
 ##Pantry Page
 List view
 
 ![Pantry Page list view] (/img/design/pantrylist.png) 
+
+---
 
 ##Favorites Page
 List view
@@ -78,6 +90,8 @@ List view
 Single view
 
 ![Favorites Page Single View] (/img/design/favexpview.png) 
+
+---
 
 ##Search
 
@@ -107,19 +121,22 @@ Logged in
 Anyone can use the advanced search. The search will filter recipes as specified.
 No open searches allowed. A parameter must be given.
 
-Filters:
-- Recipes can be searched by:
+Recipes can be filtered by:
+
 - Ingredient
 - Pantry List
-- Category/Sub-Category
-- Tag
-- Prep Time
+- Tags
+- TagPrep Time
 - Cook Time
 - Serving Number
+
+---
 
 ##Recipe of the Day
 The right sidebar with a list of random recipes with the ingredient of the day. The recipes refresh every 5 minutes with another list of recipes.
 The recipes only list the name, a picture of the recipe and the ingredients that are used. The "view" takes the user to the recipe page with all the information.
+
+---
 
 ##Recipe
 
@@ -170,6 +187,8 @@ A list of the user's favorite recipes.
 ###NoEat List
 A list of ingredients that the user wants to exclude from all searches
 
+---
+
 ##Future Features
 
 ###Meal Planner
@@ -185,14 +204,22 @@ Allows users to convert ingredient amounts to whatever they are most comfortable
 ###Recipe Cards
 Recipes can be exported/shared to social media as different templated recipe cards.
 
+
+<br><br><br>
+#Database
+
 ---
 
-#Database
 getdrinkrecpies.com uses a MySQL relational database.
 
 ##Entity-Relation Diagram
 
-![ER Diagram] (/img/db/recipeERDiagram_v3_150413.png) 
+[![ER Diagram] (/img/db/recipeERDiagram_v3_150413.png)][1]
+[1]: /img/db/recipeERDiagram_v3_150413.png
+
+*click to enlarge image*
+
+---
 
 ##Tables
 
@@ -293,11 +320,14 @@ Images that are verified go into this table. Images from this table get uploaded
 
 ![VerifiedImages Table] (/img/db/verifiedimages.png) 
 
-##Stored Procedures
-There aren't any stored procedures yet for this database.
 
----
+<br><br><br>
 #Conclusion
 
-The scope of the project was a great size in the beginning. However, towards the end more and more ideas were thrown in that should have been added. Had all these ideas been considered in the beginning, the scope still would have been ok.
-We learned that the project would have been better suited for a much smaller team. Two to three people would have been a better team size. Our team was disorganized and a lot of the time there just wasn't enough work for the entire team to be deeply involved. The project size was good however, because if the project where to grow to accommodate the team size our skill set wouldn't have been able to handle it. On a positive note, every member of the team learned a new technology, or improved a skill.
+---
+
+The scope of the project was a great size in the beginning. However, towards the end more and more ideas were thrown in that shouldn't have been added. Had all these ideas been considered in the beginning, the scope would have been ok.
+
+We learned that the project would have been better suited for a much smaller team. Two to three people would have been a better team size. Our team was disorganized. We couldn't meet up as often as we should have and a lot of the time there just wasn't enough work for the entire team to be deeply involved. The project size was good however, because if the project where to grow to accommodate the team size our skill set wouldn't have been able to handle it. 
+
+On a positive note, every member of the team learned a new technology, or improved a skill.

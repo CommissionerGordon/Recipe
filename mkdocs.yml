@@ -1,3 +1,5 @@
 site_name: Recipe
 repo_url: https://github.com/CommissionerGordon/Recipe
+site_url: http://csc413-recipefinal.rhcloud.com/
+strict: true
 theme: cosmo

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        
+        <link rel="canonical" href="http://csc413-recipefinal.rhcloud.com/">
         <link rel="shortcut icon" href="./img/favicon.ico">
 
 	<title>Recipe</title>
@@ -15,6 +15,7 @@
         <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/highlight.css">
         <link href="./css/base.css" rel="stylesheet">
+        <link href="./extra.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -129,8 +130,6 @@
         
             <li><a href="#tables">Tables</a></li>
         
-            <li><a href="#stored-procedures">Stored Procedures</a></li>
-        
     
         <li class="main "><a href="#conclusion">Conclusion</a></li>
         
@@ -139,41 +138,44 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<p>﻿</p>
-<h1 id="getdrinkrecpiescom">getdrinkrecpies.com</h1>
+<h1 id="getdrinkrecpiescom"><a href="http://csc413-recipefinal.rhcloud.com/">getdrinkrecpies.com</a></h1>
 <p>Team Recipe<br>
 CSC 413 Advanced Software Development I<br>
 Spring 2015<br></p>
-<hr />
+<p><br><br><br></p>
 <h1 id="introduction">Introduction</h1>
-<p><a href="http://csc413-recipefinal.rhcloud.com/">getdrinkrecpies.com</a>
-<a href="https://github.com/CommissionerGordon/Recipe">Github</a></p>
+<hr />
 <h2 id="purpose">Purpose</h2>
 <p>The purpose of this document is to serve as a guide to designers, developers, and testers who are responsible for the engineering of the getdrinkrecpies.com project. it should give the engineers all of the information necessary to design, develop and test the software.</p>
+<hr />
 <h2 id="scope">Scope</h2>
 <p>This document contains a complete description of the functionality or the getdrinkrecpies.com project. It includes the functional and nonfunctional requirements as well as use cases, the control flow, information about the database, behind the scene processes and external applications getdrinkrecpies.com will interface with. This document also contains the weekly reports.</p>
+<hr />
 <h2 id="system-overview">System Overview</h2>
 <p>getdrinkrecpies.com is a recipe website for people who like to cook and try new recipes but don't know which ingredients they need to use to make the drink of dish they want. Users can post, search, rate and review/comment on recipes as well as attach pictures to a recipe. </p>
 <p>People can input ingredients that they have in their kitchen/pantry and the website will  give them a list of recipes they can make with those ingredients. If the user picks a recipe to try and they don't have the ingredients a list of ingredients to buy will be generated for them. People can search for recipes by tag or by ingredients. If they want a more in-depth search they can filter searches. The user also has the ability to exclude ingredients from their searches.</p>
-<h2 id="team-recipe">Team Recipe</h2>
-<p>We're awesome and so much better than Team Scheduler.</p>
-<p><strong>Design</strong> Andre Wiggins, Garrett Reuscher<br>
-<strong>HTML/CSS</strong> Andre Wiggins, Garrett Reuscher<br>
-<strong>Javascript/jQuery</strong> Benedicta Baidoo<br>
-<strong>PHP</strong> Jason Brown, Kyler Edwards, Amanda Jaynes<br>
-<strong>C#</strong> Amanda Jaynes<br>
-<strong>Database</strong> Benedicta Baidoo<br>
-<strong>Web server management</strong> Jason Brown<br>
-<strong>Technical document</strong> Benedicta Baidoo, Kyler Edwards</p>
 <hr />
+<h2 id="team-recipe">Team Recipe</h2>
+<p><strong>Design:</strong> Andre Wiggins, Garrett Reuscher<br>
+<strong>HTML/CSS:</strong> Andre Wiggins, Garrett Reuscher<br>
+<strong>Javascript/jQuery:</strong> Benedicta Baidoo<br>
+<strong>PHP:</strong> Jason Brown, Kyler Edwards, Amanda Jaynes<br>
+<strong>C#:</strong> Amanda Jaynes<br>
+<strong>Database:</strong> Benedicta Baidoo<br>
+<strong>Web server management:</strong> Jason Brown<br>
+<strong>Technical document:</strong> Benedicta Baidoo, Kyler Edwards</p>
+<p><br><br><br></p>
 <h1 id="software-architecture">Software Architecture</h1>
+<hr />
 <p><strong>Front End:</strong> HTML, CSS, Javascript, JQuery<br>
 <strong>Back End:</strong> PHP<br>
 <strong>Database:</strong> MySQL<br>
 <strong>Web Server:</strong> getdrinkrecpies.com is hosted on Openshift which runs redhat linux. <br>
 <strong>Platform:</strong> any device with a web browser and internet connection</p>
 <hr />
+<p><br><br><br></p>
 <h1 id="functional-requirements">Functional Requirements</h1>
+<hr />
 <h2 id="home-page">Home Page</h2>
 <p>Not logged in</p>
 <p><img alt="Home page not logged in" src="./img/design/homenotloggedin.png" /> </p>
@@ -185,14 +187,17 @@ Spring 2015<br></p>
 <p><img alt="Home page logged in" src="./img/design/homeloggedin.png" /></p>
 <h3 id="recommended-recipes">Recommended Recipes</h3>
 <p>The recommended recipes are made up of recipes the user has favorited, saved for later, or have the same ingredients as recipes in their lists.</p>
+<hr />
 <h2 id="pantry-page">Pantry Page</h2>
 <p>List view</p>
 <p><img alt="Pantry Page list view" src="./img/design/pantrylist.png" /> </p>
+<hr />
 <h2 id="favorites-page">Favorites Page</h2>
 <p>List view</p>
 <p><img alt="Favorites Page list view" src="./img/design/favlist.png" /> </p>
 <p>Single view</p>
 <p><img alt="Favorites Page Single View" src="./img/design/favexpview.png" /> </p>
+<hr />
 <h2 id="search">Search</h2>
 <h3 id="regular-search">Regular Search</h3>
 <p>Not logged in</p>
@@ -209,18 +214,20 @@ Anyone can search for recipes. What they enter will be searched through ingredie
 <p><img alt="Advanced Search Page Logged in" src="./img/design/advsearchloggedin.png" /> </p>
 <p>Anyone can use the advanced search. The search will filter recipes as specified.
 No open searches allowed. A parameter must be given.</p>
-<p>Filters:
-- Recipes can be searched by:
-- Ingredient
-- Pantry List
-- Category/Sub-Category
-- Tag
-- Prep Time
-- Cook Time
-- Serving Number</p>
+<p>Recipes can be filtered by:</p>
+<ul>
+<li>Ingredient</li>
+<li>Pantry List</li>
+<li>Tags</li>
+<li>TagPrep Time</li>
+<li>Cook Time</li>
+<li>Serving Number</li>
+</ul>
+<hr />
 <h2 id="recipe-of-the-day">Recipe of the Day</h2>
 <p>The right sidebar with a list of random recipes with the ingredient of the day. The recipes refresh every 5 minutes with another list of recipes.
 The recipes only list the name, a picture of the recipe and the ingredients that are used. The "view" takes the user to the recipe page with all the information.</p>
+<hr />
 <h2 id="recipe">Recipe</h2>
 <h3 id="create">Create</h3>
 <p>Only the user can create a recipe.</p>
@@ -327,6 +334,7 @@ For tagging anyone can add tags to a recipe.</p>
 <p>A list of the user's favorite recipes.</p>
 <h3 id="noeat-list">NoEat List</h3>
 <p>A list of ingredients that the user wants to exclude from all searches</p>
+<hr />
 <h2 id="future-features">Future Features</h2>
 <h3 id="meal-planner">Meal Planner</h3>
 <p>Picks a random assortment of recipes (that the user has and hasn't tried) that use ingredients in the user's pantry, and picks a recipe for the user to make for each meal of the week.
@@ -337,11 +345,14 @@ Example: http://bit.ly/1Dqij3b</p>
 <p>Allows users to convert ingredient amounts to whatever they are most comfortable using. Would work as a drop down menu next to the ingredient amount on each recipe page.</p>
 <h3 id="recipe-cards">Recipe Cards</h3>
 <p>Recipes can be exported/shared to social media as different templated recipe cards.</p>
-<hr />
+<p><br><br><br></p>
 <h1 id="database">Database</h1>
+<hr />
 <p>getdrinkrecpies.com uses a MySQL relational database.</p>
 <h2 id="entity-relation-diagram">Entity-Relation Diagram</h2>
-<p><img alt="ER Diagram" src="./img/db/recipeERDiagram_v3_150413.png" /> </p>
+<p><a href="./img/db/recipeERDiagram_v3_150413.png"><img alt="ER Diagram" src="./img/db/recipeERDiagram_v3_150413.png" /></a></p>
+<p><em>click to enlarge image</em></p>
+<hr />
 <h2 id="tables">Tables</h2>
 <h3 id="brandingredients">BrandIngredients</h3>
 <p>This table connects brands and ingredients. Brands can have multiple ingredients and ingredients can be associated with multiple brands.</p>
@@ -400,12 +411,12 @@ Example: http://bit.ly/1Dqij3b</p>
 <h3 id="verifiedimages">VerifiedImages</h3>
 <p>Images that are verified go into this table. Images from this table get uploaded on the website. </p>
 <p><img alt="VerifiedImages Table" src="./img/db/verifiedimages.png" /> </p>
-<h2 id="stored-procedures">Stored Procedures</h2>
-<p>There aren't any stored procedures yet for this database.</p>
-<hr />
+<p><br><br><br></p>
 <h1 id="conclusion">Conclusion</h1>
-<p>The scope of the project was a great size in the beginning. However, towards the end more and more ideas were thrown in that should have been added. Had all these ideas been considered in the beginning, the scope still would have been ok.
-We learned that the project would have been better suited for a much smaller team. Two to three people would have been a better team size. Our team was disorganized and a lot of the time there just wasn't enough work for the entire team to be deeply involved. The project size was good however, because if the project where to grow to accommodate the team size our skill set wouldn't have been able to handle it. On a positive note, every member of the team learned a new technology, or improved a skill.</p></div>
+<hr />
+<p>The scope of the project was a great size in the beginning. However, towards the end more and more ideas were thrown in that shouldn't have been added. Had all these ideas been considered in the beginning, the scope would have been ok.</p>
+<p>We learned that the project would have been better suited for a much smaller team. Two to three people would have been a better team size. Our team was disorganized. We couldn't meet up as often as we should have and a lot of the time there just wasn't enough work for the entire team to be deeply involved. The project size was good however, because if the project where to grow to accommodate the team size our skill set wouldn't have been able to handle it. </p>
+<p>On a positive note, every member of the team learned a new technology, or improved a skill.</p></div>
         </div>
 
         
